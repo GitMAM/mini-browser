@@ -13,6 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    if isRunningTest {
+      UserDefaults.removeData(key: .webViewState)
+      UserDefaults.removeData(key: .webViewUrl)
+
+    }
+    
     return true
   }
 
@@ -33,3 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate {
+  public var isRunningTest: Bool {
+    return ProcessInfo().arguments.contains("testMode")
+  }
+}

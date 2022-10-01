@@ -8,12 +8,12 @@
 import Foundation
 
 
-enum UserDefaultKeys: String {
+public enum UserDefaultKeys: String {
   case webViewUrl
   case webViewState
 }
 
-extension UserDefaults {
+public extension UserDefaults {
   
   static func setData<T>(value: T, key: UserDefaultKeys) {
     let defaults = UserDefaults.standard
