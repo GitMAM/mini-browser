@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D34014B628E8AEC0008DA614 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34014B528E8AEC0008DA614 /* UserDefaultsHelper.swift */; };
+		D34014B828E8C737008DA614 /* MiniBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34014B728E8C737008DA614 /* MiniBrowserViewController.swift */; };
 		D35B9BDB28E7186E005E8C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B9BDA28E7186E005E8C86 /* AppDelegate.swift */; };
 		D35B9BDD28E7186E005E8C86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B9BDC28E7186E005E8C86 /* SceneDelegate.swift */; };
-		D35B9BDF28E7186E005E8C86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B9BDE28E7186E005E8C86 /* ViewController.swift */; };
-		D35B9BE228E7186E005E8C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35B9BE028E7186E005E8C86 /* Main.storyboard */; };
 		D35B9BE428E7186F005E8C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35B9BE328E7186F005E8C86 /* Assets.xcassets */; };
 		D35B9BE728E7186F005E8C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35B9BE528E7186F005E8C86 /* LaunchScreen.storyboard */; };
 		D35B9BF228E7186F005E8C86 /* mini_browserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B9BF128E7186F005E8C86 /* mini_browserTests.swift */; };
 		D35B9BFC28E7186F005E8C86 /* mini_browserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B9BFB28E7186F005E8C86 /* mini_browserUITests.swift */; };
 		D35B9BFE28E7186F005E8C86 /* mini_browserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B9BFD28E7186F005E8C86 /* mini_browserUITestsLaunchTests.swift */; };
+		D35B9C0B28E79100005E8C86 /* WebViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B9C0A28E79100005E8C86 /* WebViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D34014B528E8AEC0008DA614 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		D34014B728E8C737008DA614 /* MiniBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBrowserViewController.swift; sourceTree = "<group>"; };
 		D35B9BD728E7186E005E8C86 /* mini-browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mini-browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35B9BDA28E7186E005E8C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D35B9BDC28E7186E005E8C86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D35B9BDE28E7186E005E8C86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D35B9BE128E7186E005E8C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D35B9BE328E7186F005E8C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35B9BE628E7186F005E8C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D35B9BE828E7186F005E8C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		D35B9BF728E7186F005E8C86 /* mini-browserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mini-browserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35B9BFB28E7186F005E8C86 /* mini_browserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mini_browserUITests.swift; sourceTree = "<group>"; };
 		D35B9BFD28E7186F005E8C86 /* mini_browserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mini_browserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D35B9C0A28E79100005E8C86 /* WebViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D34014BA28E8D5A8008DA614 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D35B9BDA28E7186E005E8C86 /* AppDelegate.swift */,
+				D35B9BDC28E7186E005E8C86 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D34014BB28E8D5B9008DA614 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				D34014B728E8C737008DA614 /* MiniBrowserViewController.swift */,
+				D35B9C0A28E79100005E8C86 /* WebViewState.swift */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		D34014BC28E8D5D4008DA614 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D34014B528E8AEC0008DA614 /* UserDefaultsHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D35B9BCE28E7186E005E8C86 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +127,9 @@
 		D35B9BD928E7186E005E8C86 /* mini-browser */ = {
 			isa = PBXGroup;
 			children = (
-				D35B9BDA28E7186E005E8C86 /* AppDelegate.swift */,
-				D35B9BDC28E7186E005E8C86 /* SceneDelegate.swift */,
-				D35B9BDE28E7186E005E8C86 /* ViewController.swift */,
-				D35B9BE028E7186E005E8C86 /* Main.storyboard */,
+				D34014BA28E8D5A8008DA614 /* App */,
+				D34014BB28E8D5B9008DA614 /* Browser */,
+				D34014BC28E8D5D4008DA614 /* Helpers */,
 				D35B9BE328E7186F005E8C86 /* Assets.xcassets */,
 				D35B9BE528E7186F005E8C86 /* LaunchScreen.storyboard */,
 				D35B9BE828E7186F005E8C86 /* Info.plist */,
@@ -233,7 +260,6 @@
 			files = (
 				D35B9BE728E7186F005E8C86 /* LaunchScreen.storyboard in Resources */,
 				D35B9BE428E7186F005E8C86 /* Assets.xcassets in Resources */,
-				D35B9BE228E7186E005E8C86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D35B9BDF28E7186E005E8C86 /* ViewController.swift in Sources */,
+				D34014B628E8AEC0008DA614 /* UserDefaultsHelper.swift in Sources */,
+				D34014B828E8C737008DA614 /* MiniBrowserViewController.swift in Sources */,
 				D35B9BDB28E7186E005E8C86 /* AppDelegate.swift in Sources */,
 				D35B9BDD28E7186E005E8C86 /* SceneDelegate.swift in Sources */,
+				D35B9C0B28E79100005E8C86 /* WebViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D35B9BE028E7186E005E8C86 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D35B9BE128E7186E005E8C86 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D35B9BE528E7186F005E8C86 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,9 +461,9 @@
 				INFOPLIST_FILE = "mini-browser/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,9 +488,9 @@
 				INFOPLIST_FILE = "mini-browser/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
