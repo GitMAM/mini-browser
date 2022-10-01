@@ -14,9 +14,9 @@ final class MiniBrowserViewController: UIViewController, WKNavigationDelegate {
   private var state: WebViewState = .initialState {
     didSet {
       if let currentUrl = webView.url {
-        UserDefaults.setData(value: currentUrl.absoluteString, key: .webViewUrl)
+        UserDefaults.set(value: currentUrl.absoluteString, key: .webViewUrl)
       }
-      UserDefaults.setData(value: state.rawValue, key: .webViewState)
+      UserDefaults.set(value: state.rawValue, key: .webViewState)
       handleToolBarButtonsState(with: state)
     }
   }
@@ -44,9 +44,9 @@ final class MiniBrowserViewController: UIViewController, WKNavigationDelegate {
     webView.translatesAutoresizingMaskIntoConstraints = false
     webView.allowsBackForwardNavigationGestures = true
     webView.navigationDelegate = self
+    webView.isHidden = true
     return webView
   }()
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -63,7 +63,7 @@ final class MiniBrowserViewController: UIViewController, WKNavigationDelegate {
   // determine the state of the app after launch (i.e load last visited website)
   private func handleAppLaunch() {
     
-    if let stateRawValue = UserDefaults.getData(type: String.self, forKey: .webViewState), let savedState =  WebViewState(rawValue: stateRawValue) {
+    if let stateRawValue = UserDefaults.get(type: String.self, forKey: .webViewState), let savedState =  WebViewState(rawValue: stateRawValue) {
       
       state = savedState
       
@@ -72,7 +72,7 @@ final class MiniBrowserViewController: UIViewController, WKNavigationDelegate {
       case .initialState, .backToInitialState:
         break
       case .loaded, .backToMainWebPage:
-        if let url = UserDefaults.getData(type: String.self, forKey: .webViewUrl) {
+        if let url = UserDefaults.get(type: String.self, forKey: .webViewUrl) {
           loadWebView(with: URL(string: url)!)
         }
       }
@@ -178,7 +178,7 @@ final class MiniBrowserViewController: UIViewController, WKNavigationDelegate {
   private func loadWebView(with url: URL) {
     
     transitionBetweenModes(with: .web)
-    
+
     webView.load(URLRequest(url: url))
     
     state = .loaded
